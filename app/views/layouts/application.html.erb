@@ -2,13 +2,29 @@
 <html>
 <head>
   <title>BucketList</title>
+  <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">Bucket List - Things to do before I die</a>
+            <ul class="nav">
+                <li class="active"><a href="/items">Things to do</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+  <%= yield %>
+</div>
 </body>
+<footer>
+    <div class="container">
+        Rails Girls Chicago 2012
+    </div>
+</footer>
 </html>
